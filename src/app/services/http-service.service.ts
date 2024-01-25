@@ -15,7 +15,9 @@ export class HttpService {
     return this.httpClient.get('http://localhost:3000/');
   }
 
-  public upload(file: any){
-    return this.httpClient.post('http://localhost:3000/upload', {file: file})
+  public upload(file: File){
+    const formData = new FormData();
+    formData.append('file', file);
+    return this.httpClient.post('http://localhost:3000/upload', formData)
   }
 }

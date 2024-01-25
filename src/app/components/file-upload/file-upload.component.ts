@@ -37,6 +37,4 @@ export class FileUploadComponent {
       console.error('No file selected');
     }
   }
-}{
-
 }
